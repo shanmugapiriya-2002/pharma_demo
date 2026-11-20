@@ -1,12 +1,20 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 const escapeHtml = (s: string) =>
   s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
 export async function POST(req: NextRequest) {
+  // Create the client per request: `new Resend()` throws when the key is
+  // missing, and doing that at module load breaks `next build`.
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.error("[send-email] RESEND_API_KEY is not set");
+    return NextResponse.json({ error: "Email service is not configured." }, { status: 500 });
+  }
+  const resend = new Resend(apiKey);
+
   const body = await req.json();
   const { to, country, honeypot } = body;
 

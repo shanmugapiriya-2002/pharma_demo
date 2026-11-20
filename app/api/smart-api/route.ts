@@ -4,7 +4,10 @@ const SMART_API_URL =
   "https://xererutljqhdmqqsdsxz.supabase.co/functions/v1/smart-api";
 
 export async function POST(request: Request) {
+  // smart-api lives in a different Supabase project than app_users,
+  // so it has its own key (SMART_API_KEY); falls back to the old variable.
   const key =
+    process.env.SMART_API_KEY ||
     process.env.SUPABASE_SECRET_KEY ||
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
     "";
