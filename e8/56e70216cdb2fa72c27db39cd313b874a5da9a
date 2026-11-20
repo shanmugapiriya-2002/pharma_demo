@@ -1,0 +1,34 @@
+app/api/send-email/route.ts
+  s_1714ceef1b6db7::t_0a5d9a863e4512 9-17
+package.json
+  s_1714ceef1b6db7::t_0a5d9a863e4512 14
+lib/saveUser.ts
+  s_1714ceef1b6db7::t_0a5d9a863e4512 1-40
+app/api/smart-api/route.ts
+  s_1714ceef1b6db7::t_64762ab3284427 7-8,10
+auth.ts
+  s_1714ceef1b6db7::t_0a5d9a863e4512 1-3,5-26
+package-lock.json
+  s_1714ceef1b6db7::t_0a7c77f01a11bd 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e856e70216cdb2fa72c27db39cd313b874a5da9a",
+  "prompts": {},
+  "humans": {
+    "h_c33f5cf6d23190": {
+      "author": "shanmugapiriya-2002 <shanmugapiriya@krylox.ai>"
+    }
+  },
+  "sessions": {
+    "s_1714ceef1b6db7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2376e731-72c4-44ba-94b6-bc4457eb63aa",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "shanmugapiriya-2002 <shanmugapiriya@krylox.ai>"
+    }
+  }
+}
