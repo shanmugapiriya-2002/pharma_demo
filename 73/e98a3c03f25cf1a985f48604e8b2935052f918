@@ -1,0 +1,21 @@
+app/api/send-email/route.ts
+  h_c33f5cf6d23190 33,54
+package.json
+  h_c33f5cf6d23190 2
+app/layout.tsx
+  h_c33f5cf6d23190 16-17
+  h_c33f5cf6d23190 22
+package-lock.json
+  h_c33f5cf6d23190 2,8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "73e98a3c03f25cf1a985f48604e8b2935052f918",
+  "prompts": {},
+  "humans": {
+    "h_c33f5cf6d23190": {
+      "author": "shanmugapiriya-2002 <shanmugapiriya@krylox.ai>"
+    }
+  }
+}
