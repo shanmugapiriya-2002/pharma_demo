@@ -21,8 +21,6 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Link to the document upload page. Set APP_URL in production
-  // (e.g. https://pharma.example.com); falls back to the current host.
   const baseUrl = (process.env.APP_URL || req.nextUrl.origin).replace(
     /\/$/,
     "",
@@ -32,7 +30,7 @@ export async function POST(req: NextRequest) {
   const uploadUrl = `${baseUrl}/upload-documents?${params}`;
 
   const { error } = await resend.emails.send({
-    from: "Krylox Contact Form <hello@krylox.ai>",
+    from: "CuraLex Document Form <hello@krylox.ai>",
     to,
     subject: "Upload your NAFDAC registration documents",
     text: [
@@ -53,6 +51,7 @@ export async function POST(req: NextRequest) {
             Upload Documents
           </a>
         </p>
+        <p>Thank you</p>
       </div>`,
   });
 
